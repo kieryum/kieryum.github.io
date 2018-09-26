@@ -9,7 +9,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 # My markdown file.
-
+lang: java
 ```markdown
 public static void main(String[] args){
   String str = "你好啊！这个是你应该得到的";

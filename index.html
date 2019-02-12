@@ -4,10 +4,22 @@
 	<meta charset="UTF-8">
 	<title>kieryum</title>
 </head>
+<script type="text/javascript" src="https://kieryum.github.io/static/lib/vue/vue.js"></script>
 <body>
+	<div id="test">
+		{{name}}
+	</div>
+
 	<div style="width: 1200px; height: 500px;margin: auto;padding: auto;">
 		<h2>这是我GitHub上的页面</h2>
 	</div>
 </body>
-<script src="static/js/demo.js"></script>
+<script>
+	var list = new Vue({
+		el:'#test',
+		data:{
+			name:'kieryum'
+		},
+	})
+</script>
 </html>

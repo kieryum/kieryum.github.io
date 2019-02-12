@@ -1,25 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>kieryum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>首页</title>
+  <link rel="stylesheet" href="https://kieryum.github.io/static/lib/layui/css/layui.css">
 </head>
-<script type="text/javascript" src="https://kieryum.github.io/static/lib/vue/vue.js"></script>
 <body>
-	<div id="test">
-		{{name}}
-	</div>
 
-	<div style="width: 1200px; height: 500px;margin: auto;padding: auto;">
-		<h2>这是我GitHub上的页面</h2>
+	<div>
+		<ul class="layui-nav" lay-filter="">
+		  <li class="layui-nav-item"><a href="">最新活动</a></li>
+		  <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+		  <li class="layui-nav-item"><a href="">大数据</a></li>
+		  <li class="layui-nav-item"><a href="blog/index.html">博客</a></li>
+		  <li class="layui-nav-item">
+			<a href="javascript:;">解决方案</a>
+			<dl class="layui-nav-child"> <!-- 二级菜单 -->
+			  <dd><a href="">移动模块</a></dd>
+			  <dd><a href="">后台模版</a></dd>
+			  <dd><a href="">电商平台</a></dd>
+			</dl>
+		  </li>
+		  <li class="layui-nav-item"><a href="">社区</a></li>
+		  <li class="layui-nav-item">
+		    <a href="">控制台<span class="layui-badge">9</span></a>
+		  </li>
+		  <ul class="layui-nav" lay-filter="" style="float: right;">
+			<li class="layui-nav-item">
+		    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			</li>
+			<li class="layui-nav-item">
+			<a href=""><img src="https://kieryum.github.io/static/image/head.jpg" class="layui-nav-img">我</a>
+			<dl class="layui-nav-child">
+			  <dd><a href="javascript:;">修改信息</a></dd>
+			  <dd><a href="javascript:;">安全管理</a></dd>
+			  <dd><a href="javascript:;">退了</a></dd>
+			</dl>
+			</li>
+		</ul>
+		</ul>
+		
 	</div>
-</body>
+ 
+<!-- 你的HTML代码 -->
+ 
+<script src="https://kieryum.github.io/static/lib/layui/layui.js"></script>
 <script>
-	var list = new Vue({
-		el:'#test',
-		data:{
-			name:'kieryum'
-		},
-	})
-</script>
+//一般直接写在一个js文件中
+layui.use(['layer', 'element','form'], function(){
+  var layer = layui.layer,form = layui.form,element = layui.element;
+  
+  //layer.msg('Hello World');
+});
+</script> 
+</body>
 </html>
